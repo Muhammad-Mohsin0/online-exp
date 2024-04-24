@@ -1,20 +1,21 @@
+// components/Card.js
+import React from "react";
 
-function Card ({value}) {
+function Card({ value }) {
+  const { imagesource, rating, description, price } = value;
 
-    return (
-        <div className="max-w-2xl shadow-lg justify-center">
-            <div className=" justify-center items-center w-[150% ">
-                 <img src={value.imagesource} alt="" /> 
-            </div><br />
-            <div className="">
-                <p>{value.rating}</p>
-                <p>{value.description}</p>
-                <p>{ value.price}</p>
-            </div>
-        </div>
-       
-    )
-    
+  return (
+    <div className="">
+      <div className="">
+        <img src={imagesource} alt="" className="" />
+      </div>
+      <div className=" p-4 ">
+        <p>{rating}</p>
+        <p>{description}</p>
+        <p>{price}</p>
+      </div>
+    </div>
+  );
 }
 
 export default Card;
