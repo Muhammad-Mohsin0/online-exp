@@ -8,9 +8,11 @@ function Card({ value }) {
   return (
    
     <div className=" ml-16 mt-12 mb-10 shadow-md ">
-      <div className="relative  ">
+          <div className="relative  ">
+        {tag && <div className="absolute top-0 left-0 bg-red-500 text-white px-2 py-1">{tag}</div>}
+
         <img src={imagesource} alt="" className="rounded-lg h-80 w-80 object-cover" />
-        <div className="absolute mb-30">{tag}</div>
+        
       </div>
       <div className=" p-4 ">
       <div className="flex"><FaStar size={20} className="text-red-500" /><p className="ml-2">{rating}</p></div>
